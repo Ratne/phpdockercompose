@@ -2,7 +2,7 @@ services:
     php:
         build:
             context: ./docker
-            dockerfile: php.Dockerfile
+            dockerfile: php.${PHPBUILD}.Dockerfile
         #container_name: ${APP_NAME:?err}-php
         volumes:
             - './app:/var/www/html'
@@ -16,4 +16,5 @@ services:
             - 'php'
         volumes:
             - './app:/var/www/html'
-            - './config/nginx:/etc/nginx/conf.d'
+            - './nginx/nginx.conf/:/etc/nginx/nginx.conf'
+            - './nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf'
