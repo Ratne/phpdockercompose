@@ -3,7 +3,7 @@ services:
     php:
         build:
             context: ./docker
-            dockerfile: php.${PHPBUILD}.Dockerfile
+            dockerfile: php.7.4.33.Dockerfile
         volumes:
             - './app:/var/www/html'
     nginx:
