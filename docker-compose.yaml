@@ -9,7 +9,7 @@ services:
         volumes:
             - './app:/var/www/html'
     nginx:
-        image: nginx:stable-alpine3.17
+        image: nginx:latest
         ports:
             - '80'
             - '443'
