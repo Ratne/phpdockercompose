@@ -24,5 +24,5 @@ RUN docker-php-ext-install curl
 RUN docker-php-ext-install intl
 RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install xml
-RUN pecl install imagick-3.7.0;
+RUN pecl install imagick;
 RUN docker-php-ext-enable imagick;
