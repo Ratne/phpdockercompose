@@ -26,3 +26,5 @@ RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install xml
 RUN pecl install imagick-3.7.0;
 RUN docker-php-ext-enable imagick;
+EXPOSE 9000
+CMD ["php-fpm"]
