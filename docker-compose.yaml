@@ -7,13 +7,10 @@ services:
         volumes:
             - './app:/var/www/html'
     nginx:
-        image: nginx:latest
-        ports:
-            - '80'
-            - '443'
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile
         links:
             - 'php'
         volumes:
             - './app/:/var/www/html'
-            - './nginx/:/etc/nginx/'
-            - './nginx/conf.d/:/etc/nginx/conf.d/'
