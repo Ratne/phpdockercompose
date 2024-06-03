@@ -4,8 +4,6 @@ services:
         build:
             context: ./docker
             dockerfile: php.${PHPBUILD}.Dockerfile
-        ports:
-            - '9000'    
         volumes:
             - './app:/var/www/html'
     nginx:
