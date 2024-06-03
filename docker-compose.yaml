@@ -13,4 +13,4 @@ services:
         links:
             - 'php'
         volumes:
-            - './app/:/var/www/html'
+            - './nginx/app/:/var/www/html'
