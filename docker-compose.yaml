@@ -4,8 +4,6 @@ services:
         build:
             context: ./docker
             dockerfile: php.${PHPBUILD}.Dockerfile
-        volumes:
-            - './app:/var/www/html'
     nginx:
         build:
             context: ./nginx
