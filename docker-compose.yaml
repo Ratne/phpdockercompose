@@ -12,3 +12,5 @@ services:
             dockerfile: Dockerfile
         links:
             - 'php'
+        volumes:
+            - './nginx/html:/var/www/html'
