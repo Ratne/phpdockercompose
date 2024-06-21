@@ -4,17 +4,12 @@ services:
         build:
             context: ./docker
             dockerfile: php.${PHPBUILD}.Dockerfile
-        ports:
-            - "9000"
         volumes:
             - './nginx/html/:/var/www/html/'
     nginx:
         build:
             context: ./nginx
             dockerfile: Dockerfile
-        ports:
-            - "80"
-            - "443"
         links:
             - 'php'
         volumes:
