@@ -10,11 +10,6 @@ services:
         build:
             context: ./nginx
             dockerfile: Dockerfile
-        healthcheck:
-            test: [ "CMD", "nc", "-vz", "-w1", "localhost", "80" ]
-            interval: 1s
-            timeout: 1s
-            retries: 30
         links:
             - 'php'
         volumes:
